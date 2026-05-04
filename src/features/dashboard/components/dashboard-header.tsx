@@ -4,8 +4,6 @@ import { useUser } from "@clerk/nextjs";
 import { Headphones, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 
-import { SidebarTrigger } from "@/components/ui/sidebar";
-
 import { Button } from "@/components/ui/button";
 
 export default function DashboardHeader() {
