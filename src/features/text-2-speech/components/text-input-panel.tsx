@@ -23,7 +23,7 @@ export function TextInputPanel() {
         <div className="relative min-h-0 flex-1">
             <form.Field name="text">
                 {(field) => (
-                    <Textarea 
+                    <textarea 
                         value={field.state.value}
                         onChange={(e) => field.handleChange(e.target.value)}
                         placeholder="Start by typing or paste your text here..."
@@ -33,7 +33,7 @@ export function TextInputPanel() {
                     />
                 )}
             </form.Field>
-            { /*Buttom Fade Overlay*/ }
+            { /*Bottom Fade Overlay*/ }
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-background to-transparent" />
         </div>
         { /*Action Bar*/ }
@@ -48,10 +48,10 @@ export function TextInputPanel() {
                 />
             </div>
             {/* Desktop View */}
-            { Text.length === 0 ? (
+            { text.length === 0 ? (
                 <div className="hidden lg:block">
                     <p className="text-sm text-muted-foreground">
-                        Get Started by Typing or posting text above.
+                        Get started by typing or pasting text above.
                     </p>
                 </div>
             ) : (
@@ -60,7 +60,7 @@ export function TextInputPanel() {
                         <Coins className="size-3 text-chart-5"/>
                         <span className="text-xs">
                             <span className="tabular-nums">
-                                ${(Text.length * COST_PER_UNIT).toFixed(4)}
+                                ${(text.length * COST_PER_UNIT).toFixed(4)}
                             </span>
                             {" "}
                             estimated
@@ -68,13 +68,13 @@ export function TextInputPanel() {
                     </Badge>
                     <div className="flex items-center gap-3">
                         <p className="text-xs tracking-tight">
-                            {Text.length.toLocaleString()}
+                            {text.length.toLocaleString()}
                             <span className="text-xs text-muted-foreground">
                                 &nbsp;/&nbsp;{TEXT_MAX_LENGTH.toLocaleString()} Characters
                             </span>
                         </p>
                          <GenerateButton 
-                            className="sm"
+                            size="sm"
                             disabled={isSubmitting || !isValid}
                             isSubmitting={isSubmitting}
                             onSubmit={() => form.handleSubmit()}
