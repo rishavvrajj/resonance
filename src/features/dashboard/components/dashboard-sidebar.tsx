@@ -102,7 +102,7 @@ export default function DashboardSidebar() {
     const mainMenu : MenuItem[] = [
         { title: "Dashboard", url: "/", icon: Home},
         { title: "Explore Voice", url: "/voices", icon: LayoutGrid},
-        { title: "Text To Speech", url: "/text-2-speech", icon: AudioLines},
+        { title: "Text To Speech", url: "/text-to-speech", icon: AudioLines},
         { title: "Voice Cloning", icon: Volume2}
     ];
 

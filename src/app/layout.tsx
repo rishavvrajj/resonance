@@ -12,8 +12,11 @@ const outfit = Outfit({            // Added: Specifies available weight
 });
 
 export const metadata: Metadata = {
-  title: "Resonance",
-  description: "ElevenLabs Clone by ig:@rishavvrajj",
+  title: {
+    default : "Resonance",
+    template : "%s | Resonance"
+  },
+  description: "AI-powered text-to-speech and voice cloning platform.",
 };
 
 export default function RootLayout({

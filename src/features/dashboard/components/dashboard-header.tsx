@@ -8,7 +8,7 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 
 import { Button } from "@/components/ui/button";
 
-export default function DashbaordHeader() {
+export default function DashboardHeader() {
 
   const { isLoaded, user } = useUser();
 
