@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from '@clerk/nextjs'
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({            // Added: Specifies available weight
   subsets: ['latin']
@@ -34,6 +35,7 @@ export default function RootLayout({
               <Toaster />
             </TooltipProvider>
           </ClerkProvider>
+          <Analytics />
         </body>
       </html>
   );
