@@ -7,6 +7,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { TRPCReactProvider } from "@/trpc/client";
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({            // Added: Specifies available weight
   subsets: ['latin']
