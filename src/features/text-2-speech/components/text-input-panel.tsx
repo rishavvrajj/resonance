@@ -4,7 +4,6 @@ import { Coins } from "lucide-react"
 import { useStore } from "@tanstack/react-form"
 
 import { Badge } from "@/components/ui/badge"
-import { Textarea } from "@/components/ui/textarea"
 import { useTypedAppFormContext } from "@/hooks/use-app-form"
 
 import { TEXT_MAX_LENGTH,COST_PER_UNIT } from "../data/constants"

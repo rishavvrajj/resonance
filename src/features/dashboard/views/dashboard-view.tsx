@@ -1,4 +1,3 @@
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import DashboardHeader from "@/features/dashboard/components/dashboard-header";
 import HeroPattern from "../components/hero-pattern";
 import PageHeader from "@/components/page-header";

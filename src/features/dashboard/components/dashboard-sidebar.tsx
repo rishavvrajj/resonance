@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ import {
   SidebarTrigger
 } from "@/components/ui/sidebar";
 
-import { OrganizationProfile, OrganizationSwitcher, UserButton, useClerk } from "@clerk/nextjs";
+import { OrganizationSwitcher, UserButton, useClerk } from "@clerk/nextjs";
 
 import {
   Home,
@@ -32,7 +32,6 @@ import {
 } from "lucide-react";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { Organization } from "@clerk/nextjs/server";
 
 interface MenuItem {
     title : string;

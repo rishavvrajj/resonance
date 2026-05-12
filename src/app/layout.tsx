@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from '@clerk/nextjs'
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { TRPCReactProvider } from "@/trpc/client";
 
 const outfit = Outfit({            // Added: Specifies available weight
   subsets: ['latin']
@@ -24,17 +26,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className={cn("font-sans", outfit.className)}>
-        <body
-          className={`${outfit.className}antialiased`}
-        >
-          <ClerkProvider>
+    <ClerkProvider>
+      <TRPCReactProvider>
+        <html lang="en" className={cn("font-sans", outfit.className)}>
+          <body
+            className={`${outfit.className}antialiased`}
+          >
             <TooltipProvider>
               {children}
+              <SpeedInsights />
               <Toaster />
             </TooltipProvider>
-          </ClerkProvider>
-        </body>
-      </html>
+          </body>
+        </html>
+      </TRPCReactProvider>
+    </ClerkProvider>
   );
 }
