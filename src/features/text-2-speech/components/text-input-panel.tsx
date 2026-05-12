@@ -4,7 +4,6 @@ import { Coins } from "lucide-react"
 import { useStore } from "@tanstack/react-form"
 
 import { Badge } from "@/components/ui/badge"
-import { Textarea } from "@/components/ui/textarea"
 import { useTypedAppFormContext } from "@/hooks/use-app-form"
 
 import { TEXT_MAX_LENGTH,COST_PER_UNIT } from "../data/constants"
@@ -34,7 +33,7 @@ export function TextInputPanel() {
                 )}
             </form.Field>
             { /*Bottom Fade Overlay*/ }
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-t from-background to-transparent" />
         </div>
         { /*Action Bar*/ }
         <div className="shrink-0 p-4 lg:p-6">
