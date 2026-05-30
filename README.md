@@ -42,7 +42,7 @@ Planned integrations (as you progress through the workshop):
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rishavvrajj/resonance.git
+git clone https://github.com/rishavvrajj/Resonance-Open-Source-TTS-Voice-Platform.git
 cd resonance
 ```
 
